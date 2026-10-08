@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Draft Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">D</div>
+          <div>
+            <h1>Draft Studio</h1>
+            <p class="subtitle">Write, review, and save your ideas.</p>
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <span aria-hidden="true" id="theme-icon">☾</span>
+          <span id="theme-label">Dark mode</span>
+        </button>
+      </header>
+
+      <section class="editor-card" aria-labelledby="editor-title">
+        <div class="editor-heading">
+          <div>
+            <h2 id="editor-title">Your draft</h2>
+            <p>Changes are saved automatically in this browser.</p>
+          </div>
+          <button class="clear-button" id="clear-button" type="button">Clear</button>
+        </div>
+
+        <textarea id="draft" aria-label="Draft text" placeholder="Start writing your draft here..."></textarea>
+
+        <footer class="editor-footer" aria-label="Draft statistics">
+          <div class="counter" id="character-count" aria-live="polite">
+            <span class="counter-label">Characters</span>
+            <strong class="counter-value" id="character-value">0</strong>
+          </div>
+          <div class="counter" id="word-count" aria-live="polite">
+            <span class="counter-label">Words</span>
+            <strong class="counter-value" id="word-value">0</strong>
+          </div>
+          <div class="counter" id="line-count" aria-live="polite">
+            <span class="counter-label">Lines</span>
+            <strong class="counter-value" id="line-value">0</strong>
+          </div>
+        </footer>
+      </section>
+
+      <p class="status-message" id="status-message">Draft ready.</p>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
