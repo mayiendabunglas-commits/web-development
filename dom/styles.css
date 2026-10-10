@@ -1,0 +1,33 @@
+h1 {
+  color: blue;
+
+}
+.paragraph {
+  color: red;
+}
+p{
+  color: aqua;
+}
+
+#paragraph {
+  color: blue;
+}
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+
+
+section p {
+  background-color: blue;
+  font-weight: bolder;
+}
+
+button:hover {
+  background-color: brown;
+  color: white;
+}

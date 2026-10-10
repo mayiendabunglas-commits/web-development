@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickNotes</title>
+  </head>
+  <body>
+    
+    <!--everything visible goes here-->
+    <h1 class="title">QUICKNOTES</h1>
+    <h2>THIS ARE MY TODAY'S NOTES</h2>
+    <p>This is the <em> <strong>first paragraph</strong> </em> of <em>my quicknotes</em>.</p>
+    <ul>
+        <li>play soccer</li>
+        <li>study</li>
+        <li>write code</li>
+    </ul>
+    <p>
+      This is <strong>very important</strong> and this is
+      <em>emphasised</em>.<br />
+      This is the <strong>second line</strong> of the second paragraph.<br />
+      This is the <strong>third line</strong> of the second paragraph.<br />
+      <ol>
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+      </ol>
+    </p>
+    <p>Line one of the <strong>paragraph</strong>.<br />
+        <ol>
+            <li>first sub-item</li>
+            <li>second sub-item</li>
+            <li>third sub-item</li> 
+        </ol>
+        Line two  of the <strong>third</strong></p>
+        <ol>
+            <li>first sub-item</li>
+            <li>second sub-item</li>
+            <li>third sub-item</li>
+        </ol>
+        <ul>
+            <li>first unordered item</li>
+            <li>second unordered item</li>
+            <li>third unordered item</li>
+        </ul>
+        <ul>
+        <!-- Link to another website (opens in a new tab) -->
+       <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a> <br /></li> 
+       <li><a href="https://www.youtube.com/watch?v=OOA5NGgZWWo" target="_blank">LENGOMA </a><br/></li>
+<!-- Link to another page in the same folder -->
+       <li><a href="about.html">About QuickNotes</a><br/></li>
+<!-- Image in an "images" folder next to this HTML file -->
+       <li><img src="image.jpg" alt="QuickNotes logo: a yellow sticky note" /></li>
+        </ul>
+<form id="note-form">
+
+  <label for="note-input">New note</label>
+  <input
+    type="text"
+    id="note-input"
+    name="note"
+    placeholder="What do you want to Remember?"
+    required
+  />
+  <button type="submit">Add Note</button>
+</form>
+<div class="note-card">
+  <p>Meeting at <span class="highlight">3 pm</span> tomorrow.</p>
+</div>
+<form>
+    <label for="email">Email</label>
+<input type="email" 
+id="email"
+ name="email"
+  required /> 
+
+<label for="message">Message</label>
+<textarea id="message" name="message" 
+placeholder="Enter your message here..." rows="4"></textarea>
+ 
+<label for="topic">Topic</label>
+<select id="topic" name="topic">
+  <option value="bug">Report a bug</option>
+  <option value="idea">Suggest an idea</option>
+  <option value="other">Any Other</option>
+</select>
+</form>
+<video src="vida.mp4" controls width="480" alt="BANASUNGUSIA VIDEO"></video>
+<audio src="intro.mp3" controls alt="BANASUNGUSIA AUDIO"></audio>
+
+  </body>
+</html>

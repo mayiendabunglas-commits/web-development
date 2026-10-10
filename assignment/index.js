@@ -15,6 +15,7 @@ const characterValue = document.querySelector("#character-value");
 const wordValue = document.querySelector("#word-value");
 const lineValue = document.querySelector("#line-value");
 const statusMessage = document.querySelector("#status-message");
+let clearButtonClickCount = 0;
 
 function getLineCount(value) {
   return value.length === 0 ? 0 : value.split(/\r?\n/).length;
@@ -69,13 +70,20 @@ function clearDraft() {
   statusMessage.textContent = "Draft cleared.";
 }
 
+function handleClearButtonClick() {
+  clearButtonClickCount += 1;
+  console.log(`User has clicked the clear button ${clearButtonClickCount} time(s).`);
+  clearDraft();
+  statusMessage.textContent = `You have clicked the clear button ${clearButtonClickCount} time(s).`;
+}
+
 function handleInput() {
   saveDraft();
   updateCounts();
 }
 
 draft.addEventListener("input", handleInput);
-clearButton.addEventListener("click", clearDraft);
+clearButton.addEventListener("click", handleClearButtonClick);
 themeToggle.addEventListener("click", toggleTheme);
 
 document.addEventListener("keydown", (event) => {
@@ -94,3 +102,4 @@ if (savedDraft !== null) {
 }
 
 updateCounts();
+console.log("i vibe coded this one, huraah");
