@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light;
+  --page-background: #f4f6f8;
+  --surface-background: #ffffff;
+  --text-color: #20242a;
+  --muted-color: #59636e;
+  --border-color: #aab4bf;
+  --button-background: #2457a7;
+  --button-text: #ffffff;
+  --warning-color: #b45309;
+  --over-color: #c62828;
+}
+
+body.dark {
+  color-scheme: dark;
+  --page-background: #171a1f;
+  --surface-background: #232830;
+  --text-color: #f1f3f5;
+  --muted-color: #c0c7d0;
+  --border-color: #687383;
+  --button-background: #83aef5;
+  --button-text: #101820;
+  --warning-color: #ffb454;
+  --over-color: #ff7777;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem;
+  background: var(--page-background);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.notes-app {
+  width: min(100%, 42rem);
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  background: var(--surface-background);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  background: var(--surface-background);
+  color: var(--text-color);
+  font: inherit;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-radius: 0.375rem;
+  background: var(--button-background);
+  color: var(--button-text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+button:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--warning-color);
+  outline-offset: 2px;
+}
+
+.note-status {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted-color);
+}
+
+.note-status p {
+  margin: 0.75rem 0 1rem;
+}
+
+.warning {
+  color: var(--warning-color);
+}
+
+.over {
+  color: var(--over-color);
+  font-weight: 700;
+}
